@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background-color: green;
+    overflow: hidden;
+}
+
+.game-score {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    background-color:black;
+    color: white;
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    z-index: 30;
+}
+
+.road {
+    background: gray;
+    width: 40%;
+    height: 100vh;
+}
+
+.car {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 6%;
+    transform: translateY(70vh);
+}
+
+.tree {
+    position: absolute;
+    z-index: 10;
+}
+
+.tree1 {
+    width: 240px;
+    transform: translate(-650px, -5vh);
+}
+.tree2 {
+    width: 260px;
+    transform: translate(-470px, 20vh);
+}
+.tree3 {
+    width: 270px;
+    transform: translate(-500px, 70vh);
+}
+.tree4 {
+    width: 230px;
+    transform: translate(-700px, 40vh);
+}
+.tree5 {
+    width: 240px;
+    transform: translate(470px, 20vh);
+}
+.tree6 {
+    width: 260px;
+    transform: translate(700px, -10vh);
+}
+.tree7 {
+    width: 270px;
+    transform: translate(710px, 50vh);
+}
+.tree8 {
+    width: 230px;
+    transform: translate(530px, 80vh);
+}
+
+.game-btn {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    position: fixed;
+    right: 0;
+    background-color: 
+    red;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 20;
+}
+
+.game-btn img{
+    width: 50px;
+    height: 50px;
+}
+
+.play {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+
+.danger {
+    position: absolute;
+    width: 120px;
+    transform: translate(-200px,-250px);
+}
+
+.coin {
+    position: absolute;
+    width: 65px;
+    transform: translate(150px,-100px);
+}
+
+.arrow {
+    position: absolute;
+    width: 50px;
+    transform: translate(10px, -400px);
+}
+
+.backdrop {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000cc;
+    z-index: 40;
+}
+
+.backdrop-container {
+    padding: 20px 30px;
+    border-radius: 30px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 200px;
+}
+
+.finish-text {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-family: Helvetica, sans-serif;
+}
+
+.finish-text::before,
+.finish-text::after {
+    content: '👾';
+    display: block;
+    margin-left: 10px;
+    font-size: 35px;
+    animation: ease .3s jump infinite;
+    animation-direction: alternate;
+}
+
+.finish-text::before {
+    animation-delay: .1s;
+    margin-right: 10px;
+}
+
+
+.finish-text span {
+    margin-left: 10px;
+    color: purple;
+    font-size: 25px;
+}
+
+.button {
+    padding: 20px 80px;
+    background: #0206f5;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 10px;
+    position: relative; 
+    overflow-x: hidden;
+    margin-top: 40px;
+}
+
+.button .flare {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    transform: skewX(-45deg);
+    animation: flareAnimation;
+    left: -150%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    animation: flareAnimation 4.5s infinite linear;
+}
+
+@keyframes flareAnimation {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+@keyframes jump {
+    from {
+        transform: translateY(-5px);
+    }
+    to {
+        transform: translateY(-25px);
+    }
+}
